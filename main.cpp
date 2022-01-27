@@ -170,7 +170,9 @@ int main()
         cout << "========================" << endl;
         cout << "        Round " << counter << "         " << endl;
         cout << "========================" << endl;
-
+        cout << "Player hp:" << player->hp << endl;
+        cout << "Enemy hp:" << enemy->hp << endl
+             << endl;
         // player action
         cout << "Wybierz akcje: " << endl;
         cout << "1. Atak" << endl;
