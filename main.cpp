@@ -10,75 +10,77 @@ int main()
     int select = 0;
     int getch();
 
-    //for player
-    //character* player = new warrior(" ");
+    // for player
+    // Character* player = new Warrior(" ");
 
-    warrior warrior1("Marek");
-    mage mage1("Antonio");
-    archer archer1("HughAnus");
+    Warrior Warrior1("Marek");
+    Mage Mage1("Antonio");
+    Archer Archer1("HughAnus");
 
-    //for bot
-    warrior warrior2("Norbert");
-    mage mage2("Bob");
-    archer archer2("PabloTheSecond");
+    // for bot
+    Warrior Warrior2("Norbert");
+    Mage Mage2("Bob");
+    Archer Archer2("PabloTheSecond");
 
-    cout << "Choose ur character" << endl;
+    cout << "Choose ur Character" << endl;
     cout << "1. Warrior" << endl;
     cout << "2. Archer" << endl;
-    cout << "3. Mage" << endl << endl;
+    cout << "3. Mage" << endl
+         << endl;
     select = getch();
 
-    //character selection
+    // Character selection
     switch (select)
     {
     case '1':
     {
-        warrior1.introduce();
+        Warrior1.introduce();
         break;
     }
     case '2':
     {
-        archer1.introduce();
+        Archer1.introduce();
         break;
     }
     case '3':
     {
-        mage1.introduce();
+        Mage1.introduce();
         break;
     }
     }
-    //choose enemy
+    // choose enemy
     int selectEnemy;
     cout << "Wybierz przeciwnika: " << endl;
     cout << "1. Warrior" << endl;
     cout << "2. Archer" << endl;
-    cout << "3. Mage" << endl << endl;
+    cout << "3. Mage" << endl
+         << endl;
     selectEnemy = getch();
 
-    //encounter
+    // encounter
 
     switch (selectEnemy)
     {
     case '1':
     {
-        warrior2.introduce();
+        Warrior2.introduce();
         break;
     }
     case '2':
     {
-        archer2.introduce();
+        Archer2.introduce();
         break;
     }
     case '3':
     {
-        mage2.introduce();
+        Mage2.introduce();
         break;
     }
     }
 
-    //fight
+    // fight
 
-    /*while (character.isAlive())
+    /*while (Character.isAlive())
     {
         player.hp
     }*/

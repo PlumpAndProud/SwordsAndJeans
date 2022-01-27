@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-class character
+class Character
 {
 public:
-	//parameters
+	// parameters
 	string name;
 	string specialization;
 
@@ -12,7 +12,7 @@ public:
 	int speed;
 	int mana;
 
-	character()
+	Character()
 	{
 		this->name = " ";
 		this->specialization = " ";
@@ -21,7 +21,7 @@ public:
 		this->mana = 0;
 	}
 
-	//methods
+	// methods
 	void introduce();
 	void whatIsMyHp();
 	void isAlive();
