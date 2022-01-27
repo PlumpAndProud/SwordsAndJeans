@@ -11,7 +11,11 @@ int main()
     int getch();
 
     //for player
-    character* player = new warrior(" ");
+    //character* player = new warrior(" ");
+
+    warrior warrior1("Marek");
+    mage mage1("Antonio");
+    archer archer1("HughAnus");
 
     //for bot
     warrior warrior2("Norbert");
@@ -29,20 +33,17 @@ int main()
     {
     case '1':
     {
-        character* player = new warrior("Marek");
-        player.introduce();
+        warrior1.introduce();
         break;
     }
     case '2':
     {
-        character* player = new warrior("Antonio");
-        player&.introduce();
+        archer1.introduce();
         break;
     }
     case '3':
     {
-        character* player = new warrior("HughAnus");
-        player&.introduce();
+        mage1.introduce();
         break;
     }
     }
