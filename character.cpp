@@ -1,12 +1,13 @@
 #include <iostream>
 #include "character.h"
 
-void character::whatIsMyHp()
+void Character::whatIsMyHp()
 {
 	cout << "Mam " << this->hp << " HP" << endl;
 }
 
-void character::introduce()
+void Character::introduce()
 {
-	cout << "Mam na imie " << this->name << " a moja klasa to " << this->specialization << endl<<endl;
+	cout << "Mam na imie " << this->name << " a moja klasa to " << this->specialization << endl
+		 << endl;
 }

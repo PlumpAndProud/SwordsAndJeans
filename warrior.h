@@ -1,27 +1,25 @@
 #include <iostream>
 using namespace std;
 
-class warrior : public character
+class Warrior : public Character
 {
 public:
-	
-	//parameters
+	// parameters
 	int armor;
 	int stamina;
 
-	//constructor
+	// constructor
 
-	warrior(string name)
+	Warrior(string name)
 	{
-		//string
+		// string
 		this->name = name;
 		this->specialization = "Warrior";
-		//int
+		// int
 		this->hp = 20;
 		this->speed = 4;
 		this->mana = 0;
 		this->armor = 5;
 		this->stamina = 2;
 	}
-
 };
