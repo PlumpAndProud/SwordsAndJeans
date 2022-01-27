@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <conio.h>
+#include <ctime>
 #include "character.h"
 #include "warrior.h"
 #include "mage.h"
@@ -10,7 +11,7 @@ int counter = 1;
 
 string pickSomeoneElse(string repeat)
 {
-    //character check for change
+    // Character check for change
     cout << "Do you want to pick someone else? (Yes/No)" << endl;
     cin >> repeat;
     return repeat;
@@ -20,11 +21,13 @@ int enemyCharacterSelection(int selectEnemy)
 {
     int getch();
 
-    //choose enemy
-    cout << "Choose ur enemy: " << endl << endl;
+    // choose enemy
+    cout << "Choose ur enemy: " << endl
+         << endl;
     cout << "1. Warrior" << endl;
     cout << "2. Archer" << endl;
-    cout << "3. Mage" << endl << endl;
+    cout << "3. Mage" << endl
+         << endl;
     selectEnemy = getch();
     system("cls");
     return selectEnemy;
@@ -34,11 +37,13 @@ int playerCharacterSelection(int select)
 {
     int getch();
 
-    //character selection
-    cout << "Choose ur character" << endl << endl;
+    // Character selection
+    cout << "Choose ur Character" << endl
+         << endl;
     cout << "1. Warrior" << endl;
     cout << "2. Archer" << endl;
-    cout << "3. Mage" << endl << endl;
+    cout << "3. Mage" << endl
+         << endl;
     select = getch();
     system("cls");
     return select;
@@ -49,11 +54,11 @@ int main()
     srand(time(NULL));
     int getch();
 
-    //player and bot blank name template
-    character* player = new warrior(" ");
-    character* enemy = new warrior(" ");
+    // player and bot blank name template
+    Character *player = new Warrior(" ");
+    Character *enemy = new Warrior(" ");
 
-    //character selection
+    // Character selection
     string playerRepeat = "Yes";
     int select = 0;
 
@@ -65,7 +70,7 @@ int main()
         {
         case '1':
         {
-            character* player = new warrior("Mareck");
+            Character *player = new Warrior("Mareck");
             player->introduce();
             player->myStats();
             playerRepeat = pickSomeoneElse(playerRepeat);
@@ -74,7 +79,7 @@ int main()
         }
         case '2':
         {
-            character* player = new archer("Antonio");
+            Character *player = new Archer("Antonio");
             player->introduce();
             player->myStats();
             playerRepeat = pickSomeoneElse(playerRepeat);
@@ -83,7 +88,7 @@ int main()
         }
         case '3':
         {
-            character* player = new mage("HughAnus");
+            Character *player = new Mage("HughAnus");
             player->introduce();
             player->myStats();
             playerRepeat = pickSomeoneElse(playerRepeat);
@@ -92,10 +97,10 @@ int main()
         }
         }
     }
-    
+
     system("cls");
 
-    //enemy selector
+    // enemy selector
     string enemyRepeat = "Yes";
     int selectEnemy = 0;
 
@@ -103,12 +108,12 @@ int main()
     {
         selectEnemy = enemyCharacterSelection(selectEnemy);
 
-        //encounter creator (select enemy type)
+        // encounter creator (select enemy type)
         switch (selectEnemy)
         {
         case '1':
         {
-            character* enemy = new warrior("Norbert");
+            Character *enemy = new Warrior("Norbert");
             enemy->introduce();
             enemy->myStats();
             enemyRepeat = pickSomeoneElse(enemyRepeat);
@@ -117,7 +122,7 @@ int main()
         }
         case '2':
         {
-            character* enemy = new archer("Bob");
+            Character *enemy = new Archer("Bob");
             enemy->introduce();
             enemy->myStats();
             enemyRepeat = pickSomeoneElse(enemyRepeat);
@@ -126,7 +131,7 @@ int main()
         }
         case '3':
         {
-            character* enemy = new mage("PabloTheSecond");
+            Character *enemy = new Mage("PabloTheSecond");
             enemy->introduce();
             enemy->myStats();
             enemyRepeat = pickSomeoneElse(enemyRepeat);
@@ -135,8 +140,8 @@ int main()
         }
         }
     }
-    
-    //fight
+
+    // fight
 
     int playerDefCd = 0;
     int enemyDefCd = 0;
@@ -150,8 +155,8 @@ int main()
         bool playerBlock = false;
         int selectAction = 0;
 
-        //bot action
-        int action = (rand() % 10) + 1; //generation
+        // bot action
+        int action = (rand() % 10) + 1; // generation
         if (action <= 6)
         {
             enemyAttack = true;
@@ -166,7 +171,7 @@ int main()
         cout << "        Round " << counter << "         " << endl;
         cout << "========================" << endl;
 
-        //player action
+        // player action
         cout << "Wybierz akcje: " << endl;
         cout << "1. Atak" << endl;
         cout << "2. Obrona" << endl;
