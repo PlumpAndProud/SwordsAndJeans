@@ -11,11 +11,13 @@ public:
 	int hp;
 	int speed;
 	int mana;
+	int str;
 
 	character()
 	{
 		this->name = " ";
 		this->specialization = " ";
+		this->str = 0;
 		this->hp = 0;
 		this->speed = 0;
 		this->mana = 0;
@@ -23,6 +25,5 @@ public:
 
 	//methods
 	void introduce();
-	void whatIsMyHp();
-	void isAlive();
+	void myStats();
 };

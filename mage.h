@@ -16,6 +16,7 @@ public:
 		this->name = name;
 		this->specialization = "Mage";
 		//int
+		this->str = 4;
 		this->hp = 12;
 		this->speed = 8;
 		this->mana = 20;
