@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-class archer : public character
+class Archer : public Character
 {
 public:
-	//parameters
+	// parameters
 	int reloadTime;
 	bool eagleVision;
 
-	//constructor
+	// constructor
 
-	archer(string name)
+	Archer(string name)
 	{
-		//string
+		// string
 		this->name = name;
 		this->specialization = "Archer";
-		//int
+		// int
 		this->str = 5;
 		this->hp = 15;
 		this->speed = 6;
 		this->mana = 10;
 		this->reloadTime = 1;
-		//bool
+		// bool
 		this->eagleVision = true;
 	}
 };

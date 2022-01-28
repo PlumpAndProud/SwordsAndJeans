@@ -1,29 +1,29 @@
 #include <iostream>
 using namespace std;
 
-class mage : public character
+class Mage : public Character
 {
 public:
-	//parameters
+	// parameters
 	int chantSpeed;
 	bool dualChant;
 
-	//constructor
+	// constructor
 
-	mage(string name)
+	Mage(string name)
 	{
-		//string
+		// string
 		this->name = name;
 		this->specialization = "Mage";
-		//int
+		// int
 		this->str = 4;
 		this->hp = 12;
 		this->speed = 8;
 		this->mana = 20;
 		this->chantSpeed = 2;
-		//bool
+		// bool
 		this->dualChant = false;
 	}
 
-	//methods
+	// methods
 };
