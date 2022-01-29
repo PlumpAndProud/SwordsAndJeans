@@ -6,6 +6,7 @@
 #include "mage.h"
 #include "archer.h"
 using namespace std;
+
 // player and bot blank name template
 Character* player;
 Character* enemy;
