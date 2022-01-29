@@ -270,7 +270,7 @@ int main()
         ::counter++;
     }
 
-    if (enemy->hp <= 0)
+    if (::enemy->hp <= 0)
     {
         cout << "The enemy is slain, you have won" << endl;
     }
