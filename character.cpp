@@ -1,13 +1,17 @@
 #include <iostream>
 #include "character.h"
 
-void Character::whatIsMyHp()
-{
-	cout << "Mam " << this->hp << " HP" << endl;
-}
-
 void Character::introduce()
 {
-	cout << "Mam na imie " << this->name << " a moja klasa to " << this->specialization << endl
+	cout << "My name is " << this->name << " and my class is " << this->specialization << endl
+		 << endl;
+}
+
+void Character::myStats()
+{
+	cout << "My stats are: " << endl;
+	cout << "Hp: " << this->hp << endl;
+	cout << "Dmg: " << this->str << endl;
+	cout << "Speed: " << this->speed << endl
 		 << endl;
 }
